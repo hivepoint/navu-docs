@@ -1,3 +1,3 @@
 # Navu Docs
 
-[./custom-cmp] (Custom CMP Integration)
+(./custom-cmp)[Custom CMP Integration]
