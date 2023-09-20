@@ -2,7 +2,7 @@
 
 Navu has built in support for popular CMPs (Consent Management Platforms), like  OneTrust, TrustArc, and HubspotCMS. 
 
-If your site uses some other CMP, or have your own custom solution, you can integrate with Navu using a simple JavaScript API.
+If your site uses some other CMP, or if you have your own custom solution, you can integrate with Navu using a simple JavaScript API.
 
 ## Initializing the API
 
@@ -16,7 +16,7 @@ $navu.consent = 'unknown';
 The value of **consent** can be any of these values: `'unknown' | 'granted' | 'denied'`. 
 
 When you initialize the API, **you must set the value of consent**.  
-Typically the value would be `unknown` at load time, but if the user has already granted/denied permission, the approopraite value could be set. 
+Typically the value would be `unknown` at load time, but if the user has already granted/denied permission, the appropriate value could be set. 
 
 ## Updating consent
 
@@ -32,7 +32,7 @@ or
 $navu.consent = 'denied';
 ```
 
-## Navu Cookies to add to your CMP configuration
+## Adding Navu Cookies to your CMP configuration
 
 Navu uses the following cookies:
 
