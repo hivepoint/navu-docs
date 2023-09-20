@@ -2,7 +2,7 @@
 
 Navu has built in support for popular CMPs (Consent Management Platforms), like  OneTrust, TrustArc, and HubspotCMS. 
 
-If your site uses some other CMP, or if you have your own custom solution, you can integrate with Navu using a simple JavaScript API.
+If your site uses some other CMP or if you have your own custom solution, you can integrate with Navu using a simple JavaScript API.
 
 ## Initializing the API
 
