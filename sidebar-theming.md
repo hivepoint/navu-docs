@@ -45,5 +45,9 @@ The idea here is that these surfaces should have similar levels of brightness so
 The next set of properties prefixed with `--nv-highlight-` define the surfaces that are actionable (e.g. clickable) or contain special content that may need attention. There are three levels based on the importance of the content. 
 Each has a corresponding property prefixed with `--nv-on-highlight-` that sets the foreground color of the content that appears on these actionable surfaces. 
 
-The next set 
+The next set defines the special colors for the theme. These are used in UI controls - buttons, checkboxes, links etc. Or sometimes for getting attention like notifications or pulses. `--nv-primary` is usually the primary accent color for a site. Each of these also has a corresponding foregroung color. 
+
+The next set defines colors used to show errors, or surfaces that contain error related content. 
+
+Lastly, colors for borders, outlines, dividers. 
 
