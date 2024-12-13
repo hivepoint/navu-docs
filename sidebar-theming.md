@@ -1,4 +1,4 @@
-# Navu Sidebar Theming * Styling
+# Navu Sidebar Theming & Styling
 
 The sidebar comes with a default built in theme that defines a set of colors. This theme can be adjusted based on the host website by setting a bunch of CSS properties. 
 
@@ -50,4 +50,9 @@ The next set defines the special colors for the theme. These are used in UI cont
 The next set defines colors used to show errors, or surfaces that contain error related content. 
 
 Lastly, colors for borders, outlines, dividers. 
+
+## Theme Layout 
+
+Following is a visual map of where these properties are being used:
+
 
