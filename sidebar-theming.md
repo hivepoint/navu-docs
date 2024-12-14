@@ -55,4 +55,24 @@ Lastly, colors for borders, outlines, dividers.
 
 Following is a visual map of where these properties are being used:
 
+![Untitled-2023-10-20-2131](https://github.com/user-attachments/assets/485cca75-7d79-40b7-9477-db1f18dc5aee)
+
+![Untitled-2023-10-20-2131](https://github.com/user-attachments/assets/a027fa15-215b-456d-bc19-696a588f55b2)
+
+
+| Ref  | Property |
+| ------------- | ------------- |
+| **1**  | `--nv-surface-low`  |
+| **2**  | `--nv-on-surface`  |
+| **3**  | `--nv-highlight-surface-high` |
+| **4**  | `--nv-on-highlight-surface-high` |
+| **5**  | `--nv-surface-base` |
+| **6**  | `--nv-surface-medium` |
+| **7**  | `--nv-tertiary` |
+| **8**  | `--nv-primary` |
+| **9**  | `--nv-secondary` |
+| **10**  | `--nv-highlight-surface` |
+| **11**  | `--nv-on-highlight-surface` |
+| **12** | `--nv-highlight-surface-medium` |
+
 
