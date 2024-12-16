@@ -1,5 +1,15 @@
 # Navu Sidebar Styling
 
+[Theme colors](#theme-colors)
+
+[Theme layout](#theme-layout)
+
+[Common theming](#common-theming)
+
+[Layout](#layout)
+
+
+
 ## Theme Colors
 
 The sidebar comes with a default built in theme that defines a set of colors. This theme can be adjusted based on the host website by setting a bunch of CSS properties. 
