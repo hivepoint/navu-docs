@@ -184,5 +184,32 @@ In the second image,  you will notice that the sidebar is causing the menu on th
 
 In the third image, you will see that site has replaced their menu with a mobile menu. That's a good indicator when to think about what the secont transition size should be. 
 
+## Other styling 
+
+You can update the font size and family as follows:
+
+```css
+nv-sidebar {
+  font-size: 18px;
+  --nv-font-family: monospace;
+}
+```
+
+Here are some other CSS properties exposed by the sidebar:
+
+| Property  | Description | Default  |
+| ------------- | ------------- | ------------- |
+| **1**  | --nv-surface-low  | |
+| **2**  | --nv-on-surface  | |
+| **3**  | --nv-highlight-surface-high | |
+| **4**  | --nv-on-highlight-surface-high | |
+| **5**  | --nv-surface-base | |
+| **6**  | --nv-surface-medium | |
+| **7**  | --nv-tertiary | |
+| **8**  | --nv-primary | |
+| **9**  | --nv-secondary | |
+| **10**  | --nv-highlight-surface | |
+| **11**  | --nv-on-highlight-surface | |
+| **12** | --nv-highlight-surface-medium | |
 
 
