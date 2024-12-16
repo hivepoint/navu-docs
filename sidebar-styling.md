@@ -199,17 +199,30 @@ Here are some other CSS properties exposed by the sidebar:
 
 | Property  | Description | Default  |
 | ------------- | ------------- | ------------- |
-| **1**  | --nv-surface-low  | |
-| **2**  | --nv-on-surface  | |
-| **3**  | --nv-highlight-surface-high | |
-| **4**  | --nv-on-highlight-surface-high | |
-| **5**  | --nv-surface-base | |
-| **6**  | --nv-surface-medium | |
-| **7**  | --nv-tertiary | |
-| **8**  | --nv-primary | |
-| **9**  | --nv-secondary | |
-| **10**  | --nv-highlight-surface | |
-| **11**  | --nv-on-highlight-surface | |
-| **12** | --nv-highlight-surface-medium | |
+| **--nv-sidebar-fab-icon-size**  | Size of the icon/image in the FAB button  | `40px` |
+| **--nv-sidebar-fab-padding**  | Padding around the icon/image in the FAB  | `8px` |
+| **--nv-sidebar-fab-bg**  | Override the FAB background  | `--nv-primary` |
+| **--nv-sidebar-fab-fg**  | Override the FAB icon color  | `--nv-on-primary` |
+| **--nv-drawer-width**  | Width of the sidebar drawer  | `400px` |
+| **--nv-drawer-radius**  | Border radius of the drawer  | - |
+| **--nv-drawer-border-left**  | Left border of the drawer  | `1px solid var(--nv-outline)` |
+| **--nv-drawer-icon-button-color**  | Color of the drawer icons - close, menu  | `--nv-tertiary` |
+| **--nv-sidebar-user-icon-color**  | Color of the user/bot/agent icon in chat  | `#808080` |
+| **--nv-sidebar-dots-color**  | Color of the dancing dots when message is pending  | `rgba(0, 0, 0, 0.6)` |
+| **--nv-sidebar-dots-color-wave**  | Color the dancing dots animate to  | `rgba(0, 0, 0, 0.3)` |
+| **--nv-sidebar-title-h2-size**  | Font size of page titles, like title of the Splash screen  | `40px` |
+| **--nv-sidebar-title-h3-size**  | Font size of section titles on Info page  | `32px` |
+| **--nv-sidebar-title-font-weight**  | Font weight of the section title  | `100` |
+| **--nv-sidebar-title-line-height**  | Line height of the section title  | `1.2` |
+| **--nv-sidebar-form-message-size**  | Font size of the text on Info page  | `18px` |
+| **--nv-sidebar-form-message-weight**  | Font weight of the text on Info page  | `300` |
+| **--nv-sidebar-form-input-size**  | Font size of text inputs in Sidebar forms | `16px` |
+| **--nv-sidebar-citation-popup-display**  | Display property of citation popups. Set it to `none` to disable citation popups | `block` |
+| **--nv-sidebar-citation-tip-bg**  | Background of citation popup | `--nv-surface-base` |
+| **--nv-sidebar-citation-tip-fg**  | Foreground color of citation popup | `--nv-on-surface` |
+| **--nv-sidebar-splash-bg**  | Background color of splash page | `--nv-surface-low` |
+| **--nv-sidebar-form-page-bg**  | Background color of form input page | `--nv-surface-low` |
+
+
 
 
