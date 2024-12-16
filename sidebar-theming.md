@@ -1,4 +1,6 @@
-# Navu Sidebar Theming & Styling
+# Navu Sidebar Styling
+
+## Theme Colors
 
 The sidebar comes with a default built in theme that defines a set of colors. This theme can be adjusted based on the host website by setting a bunch of CSS properties. 
 
@@ -72,5 +74,35 @@ Following is a visual map of where these properties are being used:
 | **10**  | --nv-highlight-surface |
 | **11**  | --nv-on-highlight-surface |
 | **12** | --nv-highlight-surface-medium |
+
+## Common Theming 
+
+For most websites you do not need to adjust all of the properties described in the sections above. Most of the default colors are neutral enough to match most websites. 
+
+The properties you will likely have to edit more frequently are: Main highlight color, Background color for links, Secondary color that highlights messages when they arrive, and background for tabs and suggested questions
+
+Here are two common configuration examples:
+
+```css
+navu-sidebar {
+  --nv-primary: #ec9321; // buttons, etc 
+  --nv-secondary: #ec9321; // color of citations on hover, message pulsing color
+
+  --nv-highlight-surface-high: rgb(242, 232, 221); // background of sugegstion question, tabs
+  --nv-on-highlight-surface-high: rgb(242, 232, 221); // forgeround of sugegstion question, tabs
+
+  --nv-highlight-surface: rgb(250, 247, 246); // background of citation links
+}
+```
+
+```css
+navu-sidebar {
+  --nv-primary: rgb(0, 114, 188);
+  --nv-secondary: #35bfff;
+  --nv-highlight-surface-high: #0272bc;
+  --nv-on-highlight-surface-high: #fff;
+  --nv-highlight-surface: #eff2f4;
+}
+```
 
 
