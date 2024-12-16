@@ -105,4 +105,75 @@ navu-sidebar {
 }
 ```
 
+## Layout
+
+For most cases, the sidebar is designed to operate in three modes based on different window wizes. One wider screens the sidebar moves the content to the left. 
+On medium sized screens, the sidebar opens as an overlay on top of the content - like most chat bots. 
+On smaller screens, the sidebar takes over the screen. 
+
+![Untitled-2023-10-20-2131](https://github.com/user-attachments/assets/5985dd34-a2cd-4047-b3f7-6c7e898f6ea5)
+
+**Note: The underlying code does not necessarily have any notion of these three modes. These need to be defined on every site via CSS. The advantage of these being CSS only is that it makes them very flexible. The disadvantage being that you have to do it on every site**
+
+To help with the CSS, Navu will add class names to the body element indicating whether the sidebar is open or not - `nv-sidebar-open` and `nv-sidebar-closed`
+
+Here's some sample CSS the defines these three modes:
+
+```css
+@media (min-width: 1200px) {
+  body.nv-sidebar-open {
+    padding-right: 400px;
+  }
+  .nv-sidebar-open header {
+    width: calc(100% - 400px);
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 801px) {
+  navu-sidebar::part(drawer) {
+    right: 6px;
+    top: 6px;
+    height: auto;
+    bottom: 6px;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
+    border-radius: 8px;
+  }
+}
+
+@media(max-width: 800px) {
+  navu-sidebar {
+    --nv-drawer-width: 100%;
+    --nv-sidebar-mobile: true;
+  }
+}
+```
+
+Let's analyze thsi CSS. 
+
+Thew first section is under the media query `min-width: 1200px` so this defines the css for screens wider than `1200px`. In this case, we push the content from the right by `400px` which is the default width of the sidebar. Note that sometimes we add padding to the right. At other times we manipulate the width. For most cases padding should do it. If the element you're trying to resize has a width set, then you can tell it a new width by setting it to `width: calc(<old-width> - 400px);`
+
+The second section describes the overlay mode. `(max-width: 1200px) and (min-width: 801px)` defines the styles for widths between 801 and 1200 (both inclusive). In this case we do not shift any content, but style the sidebar drawer to not go from edget to edge, and have a shadow. This gives it a visual feeling of being overalid on top of the website content. 
+
+The last section `(max-width: 800px)` is for smaller screens. In this case we set the drawer width to be `100%` so it takes over the whole screen. **Important:** you should set the `--nv-sidebar-mobile` property to true in this case. Since this mode hides the content completely, it gives the underlying code to alter some behavior for this special case. 
+
+## Layout Transition Points 
+
+In the example above, it seems the transition points for the different modes is fixed. But they should be determined based on the website. 
+
+e.g. Look at the screeenshots below
+
+<img width="1380" alt="Screenshot 2024-12-16 at 12 43 42 PM" src="https://github.com/user-attachments/assets/9d5ea6af-ef94-43cb-8d2d-a9816de8324a" />
+
+<img width="1314" alt="Screenshot 2024-12-16 at 12 43 52 PM" src="https://github.com/user-attachments/assets/c33127cc-201c-4931-b9aa-fbcd522be519" />
+
+<img width="1007" alt="Screenshot 2024-12-16 at 12 44 55 PM" src="https://github.com/user-attachments/assets/680eac6b-1670-4f29-85cc-1a4b88a0e7dc" />
+
+
+In the first image, you will notice that sidebar works great at a certain size (1400px in this case).
+
+In the second image,  you will notice that the sidebar is causing the menu on the side to look shrunk of badly laid out. So that is your first transition point when that happens. 
+
+In the third image, you will see that site has replaced their menu with a mobile menu. That's a good indicator when to think about what the secont transition size should be. 
+
+
 
