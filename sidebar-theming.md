@@ -166,8 +166,7 @@ e.g. Look at the screeenshots below
 
 <img width="1314" alt="Screenshot 2024-12-16 at 12 43 52 PM" src="https://github.com/user-attachments/assets/c33127cc-201c-4931-b9aa-fbcd522be519" />
 
-<img width="1007" alt="Screenshot 2024-12-16 at 12 44 55 PM" src="https://github.com/user-attachments/assets/680eac6b-1670-4f29-85cc-1a4b88a0e7dc" />
-
+<img width="1007" alt="Screenshot 2024-12-16 at 12 47 56 PM" src="https://github.com/user-attachments/assets/1656bbdc-39ef-4763-b4a4-0ce8ef827381" />
 
 In the first image, you will notice that sidebar works great at a certain size (1400px in this case).
 
