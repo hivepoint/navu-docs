@@ -203,6 +203,7 @@ Here are some other CSS properties exposed by the sidebar:
 | **--nv-sidebar-fab-padding**  | Padding around the icon/image in the FAB  | `8px` |
 | **--nv-sidebar-fab-bg**  | Override the FAB background  | `--nv-primary` |
 | **--nv-sidebar-fab-fg**  | Override the FAB icon color  | `--nv-on-primary` |
+| **--nv-drawer-close-button-display** | Display property of the **close** button in the sidebar. Set it to none if the  web designer wants to implement their own close button.  | -|
 | **--nv-drawer-width**  | Width of the sidebar drawer  | `400px` |
 | **--nv-drawer-radius**  | Border radius of the drawer  | - |
 | **--nv-drawer-border-left**  | Left border of the drawer  | `1px solid var(--nv-outline)` |
