@@ -195,6 +195,29 @@ nv-sidebar {
 }
 ```
 
+To affect the styles when the sidebar is in **fullscreen** mode, you can apply styles as such. (*Note: You need to add `!important` on position styles for fullscreen mode*):
+
+```css
+nv-sidebar[fullscreen] {
+  top: 10px !important;
+  right: 10px !important;
+  left: 10px !important;
+  bottom: 10px !important;
+  width: auto !important;
+  height: auto !important;
+}
+```
+
+You can change the position of the FAB by styling the FAB element:
+
+```css
+navu-sidebar-fab {
+  bottom: 40px;
+  right: 40px;
+}
+```
+
+
 Here are some other CSS properties exposed by the sidebar:
 
 | Property  | Description | Default  |
@@ -204,6 +227,7 @@ Here are some other CSS properties exposed by the sidebar:
 | **--nv-sidebar-fab-bg**  | Override the FAB background  | `--nv-primary` |
 | **--nv-sidebar-fab-fg**  | Override the FAB icon color  | `--nv-on-primary` |
 | **--nv-drawer-close-button-display** | Display property of the **close** button in the sidebar. Set it to none if the  web designer wants to implement their own close button.  | -|
+| **--nv-drawer-fullscreen-button-display** | Display property of the **fullscreen** button in the sidebar.  | -|
 | **--nv-drawer-width**  | Width of the sidebar drawer  | `400px` |
 | **--nv-drawer-radius**  | Border radius of the drawer  | - |
 | **--nv-drawer-border-left**  | Left border of the drawer  | `1px solid var(--nv-outline)` |
