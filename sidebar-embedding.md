@@ -33,6 +33,14 @@ window.$navu = window.$navu || {};
 window.$navu.sidebarOpen = true;
 ```
 
+**sidebarOpen**: Set this property to `true` or `false` to Open/Close the default sidebar. If you are controlling the sidebar visibility yourself (See use cases below), 
+you should still this property to let the sidebar know if it's visible or hidden. This allows sidebar to effectively lazy load the messages.
+
+**sidebarContainer**: When you are creating a custom panel on your website to display the sidebar, you can use this to change or set that container panel. 
+The value can either be a CSS selector to the element, or a reference to the element itself. 
+
+## Events
+
 Following events are emitted by the sidebar to support integartion. More on these later. 
 
 **sidebar-request-open**: This event is fired when the user click on the FAB to request the sidebar to open. 
@@ -40,5 +48,6 @@ Following events are emitted by the sidebar to support integartion. More on thes
 **sidebar-request-close**: This event is fired when the user clicks on the `X` button in the sidebar to close it. 
 
 **sidebar-error**: This event is fired when there as an error in initializing  the sidebar. The error object is availanle in the event's detail property. `event.detail`
+
 
 # Customization Use Cases
