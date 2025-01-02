@@ -8,6 +8,8 @@
 
 [Layout](#layout)
 
+[Other Stlying](#other-styling)
+
 
 
 ## Theme Colors
