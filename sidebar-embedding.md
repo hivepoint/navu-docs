@@ -2,7 +2,7 @@
 
 This document details different ways  the sidebar layout and embedding can by customized. This can be used to deeply integrate sidebar into the host website by the web developer. 
 
-Sidebar consists of to custom HTML elements `<navu-sidebar>` and `<navu-sdiebar-fab>`(FAB). The FAB is the floating button that can be used to open the sidebar in iits default configuration. 
+Sidebar consists of to custom HTML elements `<navu-sidebar>` and `<navu-sidebar-fab>`(FAB). The FAB is the floating button that can be used to open the sidebar in iits default configuration. 
 `<navu-sidebar>` is the main sidebar component that can be added inside a  specific container or under the main `<body>` element. 
 
 # Standard Embedding
@@ -51,3 +51,94 @@ Following events are emitted by the sidebar to support integartion. More on thes
 
 
 # Customization Use Cases
+
+Following are common use cases how the web developer may chose to integrate with the sidebar. 
+
+## Custom Open/Close
+
+Let's say you do not want a FAB on your website  but want to add a open/close button in your menu to show the sidebar. 
+
+You can hide the FAB via CSS:
+
+```css
+navu-sidebar-fab {
+  display: none;
+}
+```
+
+Now you can add click handlers to your button to open/close the sidebar via the API. 
+
+```javascript
+window.$navu = window.$navu || {};
+myButton.addEventListener('click', () => window.$navu.sidebarOpen = true);
+```
+
+## Custom Container with FAB
+
+Let's say you have defined your own container where the sidebar should be rendered, could be a panel to the left of the page or perhaps a dialog. 
+You control when it's opened or closed. You can still integrate with the FAB to get notified when the user wants to show the panel.
+
+First set the custom container in the Sidebar Layout settings. Make sure to select the **'Include Floating Open Button'** option. 
+<img width="644" alt="Screenshot 2025-01-02 at 6 47 28 PM" src="https://github.com/user-attachments/assets/f4831106-7a0c-4ffc-af09-e008d8a51e37" />
+
+You can now listen to Navu events to get notified when the user wants to open/close the sidebar. Note: you should still call the API to let Navu know the open/close state of the sidebar. 
+
+```javascript
+window.$navu = window.$navu || {};
+
+document.addEventListener('sidebar-request-open', () => {
+  window.$navu.sidebarOpen = true;
+  // Code to SHOW your panel
+});
+
+document.addEventListener('sidebar-request-close', () => {
+  window.$navu.sidebarOpen = false;
+  // Code to HIDE your panel
+});
+```
+
+## Custom Container & Custom Open/Close button. 
+
+If you are using a custom container, and decide not to use the FAB, ensure that **'Include Floating Open Button'** option is set to FALSE. 
+
+<img width="644" alt="Screenshot 2025-01-02 at 6 53 13 PM" src="https://github.com/user-attachments/assets/28279503-c158-49cd-b258-3ac5872ecc51" />
+
+Now you can add your own custom logic but ensure to let the API know about the state of the sidebar. 
+
+```javascript
+window.$navu = window.$navu || {};
+
+myOpenButton.addEventListener('click', () => {
+  window.$navu.sidebarOpen = true;
+  // Code to SHOW your panel
+});
+
+myCloseButton.addEventListener('click', () => {
+  window.$navu.sidebarOpen = false;
+  // Code to HIDE your panel
+});
+```
+
+## Other Customizations
+
+### Remove Close Button
+
+The sidebar has a `close` button. When the user clicks on it, a `sidebar-request-close` event is fired (as seen in examples above). But if you do not want the close button to show up, you can do that by setting a CSS property
+
+```css
+navu-sidebar {
+--nv-drawer-close-button-display: none;
+}
+```
+
+### Fullscreen mode
+
+When not in a custom layout, the siebar has a **Fullscreen** button. Entering fullscreen will rezize the sidebar to the window size. If you do not wish to support this,  you can hide the display button via CSS.
+
+```css
+navu-sidebar {
+--nv-drawer-fullscreen-button-display: none;
+}
+```
+
+
