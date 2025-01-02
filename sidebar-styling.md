@@ -140,13 +140,13 @@ Here's some sample CSS the defines these three modes:
 }
 
 @media (max-width: 1200px) and (min-width: 801px) {
-  navu-sidebar::part(drawer) {
+  navu-sidebar {
     right: 6px;
     top: 6px;
     height: auto;
     bottom: 6px;
-    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
-    border-radius: 8px;
+    --nv-drawer-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
+    --nv-drawer-radius: 8px;
   }
 }
 
@@ -158,7 +158,7 @@ Here's some sample CSS the defines these three modes:
 }
 ```
 
-Let's analyze thsi CSS. 
+Let's analyze this CSS. 
 
 Thew first section is under the media query `min-width: 1200px` so this defines the css for screens wider than `1200px`. In this case, we push the content from the right by `400px` which is the default width of the sidebar. Note that sometimes we add padding to the right. At other times we manipulate the width. For most cases padding should do it. If the element you're trying to resize has a width set, then you can tell it a new width by setting it to `width: calc(<old-width> - 400px);`
 
