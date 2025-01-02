@@ -8,7 +8,7 @@
 
 [Layout](#layout)
 
-[Other Stlying](#other-styling)
+[Other advnaced styling](#other-styling)
 
 
 
