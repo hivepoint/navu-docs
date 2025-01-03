@@ -47,7 +47,8 @@ Following events are emitted by the sidebar to support integartion. More on thes
 
 **sidebar-request-close**: This event is fired when the user clicks on the `X` button in the sidebar to close it. 
 
-**sidebar-error**: This event is fired when there as an error in initializing  the sidebar. The error object is availanle in the event's detail property. `event.detail`
+**sidebar-error**: This event is fired when there as an error in initializing  the sidebar. The error object is availanle in the event's detail property `event.detail`. 
+You can use this to update your UI, when  using a custom layout.
 
 
 # Customization Use Cases
