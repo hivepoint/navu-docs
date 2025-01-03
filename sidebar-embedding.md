@@ -1,6 +1,6 @@
 # Sidebar Embedding
 
-This document details different ways  the sidebar layout and embedding can by customized. This can be used to deeply integrate sidebar into the host website by the web developer. 
+This document details different ways  the sidebar layout and embedding can be customized. This can be used to deeply integrate sidebar into the host website by the web developer. 
 
 Sidebar consists of to custom HTML elements `<navu-sidebar>` and `<navu-sidebar-fab>`(FAB). The FAB is the floating button that can be used to open the sidebar in iits default configuration. 
 `<navu-sidebar>` is the main sidebar component that can be added inside a  specific container or under the main `<body>` element. 
