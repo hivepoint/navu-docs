@@ -2,7 +2,7 @@
 
 This document details different ways  the sidebar layout and embedding can be customized. This can be used to deeply integrate sidebar into the host website by the web developer. 
 
-Sidebar consists of to custom HTML elements `<navu-sidebar>` and `<navu-sidebar-fab>`(FAB). The FAB is the floating button that can be used to open the sidebar in iits default configuration. 
+Sidebar consists of custom HTML elements `<navu-sidebar>` and `<navu-sidebar-fab>`(FAB). The FAB is the floating button that can be used to open the sidebar in its default configuration. 
 `<navu-sidebar>` is the main sidebar component that can be added inside a  specific container or under the main `<body>` element. 
 
 # Standard Embedding
@@ -10,7 +10,7 @@ Sidebar consists of to custom HTML elements `<navu-sidebar>` and `<navu-sidebar-
 When there is no extra configuration, the sidebar and FAB are added  as the last children of the `<body>` element. 
 The sidebar is fixed in position to the right of the screen - spanning from top to the bottom of the window. 
 
-See the [Layout section](./sidebar-styling.md#layout) of the styling document to see various ways to style the sidebar in different size. 
+See the [Layout section](./sidebar-styling.md#layout) of the styling document to see various ways to style the sidebar in different sizes. 
 
 # Client  Side  Api & Events
 
@@ -34,20 +34,20 @@ window.$navu.sidebarOpen = true;
 ```
 
 **sidebarOpen**: Set this property to `true` or `false` to Open/Close the default sidebar. If you are controlling the sidebar visibility yourself (See use cases below), 
-you should still this property to let the sidebar know if it's visible or hidden. This allows sidebar to effectively lazy load the messages.
+you should still use this property to let the sidebar know if it's visible or hidden. This allows the sidebar to effectively lazy load the messages.
 
 **sidebarContainer**: When you are creating a custom panel on your website to display the sidebar, you can use this to change or set that container panel. 
 The value can either be a CSS selector to the element, or a reference to the element itself. 
 
 ## Events
 
-Following events are emitted by the sidebar to support integartion. More on these later. 
+Following events are emitted by the sidebar to support integration. More on these later. 
 
-**sidebar-request-open**: This event is fired when the user click on the FAB to request the sidebar to open. 
+**sidebar-request-open**: This event is fired when the user clicks on the FAB to request the sidebar to open. 
 
 **sidebar-request-close**: This event is fired when the user clicks on the `X` button in the sidebar to close it. 
 
-**sidebar-error**: This event is fired when there as an error in initializing  the sidebar. The error object is availanle in the event's detail property `event.detail`. 
+**sidebar-error**: This event is fired when there is an error in initializing  the sidebar. The error object is available in the event's detail property `event.detail`. 
 You can use this to update your UI, when  using a custom layout.
 
 
@@ -57,7 +57,7 @@ Following are common use cases how the web developer may chose to integrate with
 
 ## Custom Open/Close
 
-Let's say you do not want a FAB on your website  but want to add a open/close button in your menu to show the sidebar. 
+Let's say you do not want a FAB on your website  but want to add an open/close button in your menu to show the sidebar. 
 
 You can hide the FAB via CSS:
 
@@ -134,7 +134,7 @@ navu-sidebar {
 
 ### Fullscreen mode
 
-When not in a custom layout, the siebar has a **Fullscreen** button. Entering fullscreen will rezize the sidebar to the window size. If you do not wish to support this,  you can hide the display button via CSS.
+When not in a custom layout, the sidebar has a **Fullscreen** button. Entering fullscreen will resize the sidebar to the window size. If you do not wish to support this,  you can hide the display button via CSS.
 
 ```css
 navu-sidebar {
