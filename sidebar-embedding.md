@@ -50,6 +50,38 @@ Following events are emitted by the sidebar to support integration. More on thes
 **sidebar-error**: This event is fired when there is an error in initializing  the sidebar. The error object is available in the event's detail property `event.detail`. 
 You can use this to update your UI, when  using a custom layout.
 
+## Advanced
+
+Following are a set of function your can call on the API after it has been initialized. 
+
+```typescript
+interface NavuEmbedApi {
+  get epoch(): string;
+  openSidebar(tab?: SidebarTabType, q?: string): void;
+}
+
+type SidebarTabType = 'guide' | 'contact' | 'info';
+```
+
+You can use `epoch` readonly property to confirm if Navu API has initialized. You can also listen to the `navu-api-ready` event on the document to get notified when API is ready.
+
+```javascript
+window.$navu = window.$navu || {};
+if (window.$navu.epoch) {
+  // API is ready
+} else {
+  document.addEventListener('navu-api-ready', () => {
+     // API is ready
+  );
+}
+```
+
+**openSidebar**: This method can be used to Open the sidebar to a specific tab. You can optionally pass in a string that will be prefilled in the compose section. 
+
+```javascript
+window.$navu.openSidebar('guide', 'Tell me more about pricing');
+```
+
 
 # Customization Use Cases
 
