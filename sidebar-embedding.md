@@ -154,7 +154,7 @@ document.addEventListener('sidebar-request-close', () => {
 });
 ```
 
-## Custom Container & Custom Open/Close button. 
+## Custom Container & Custom Open/Close Button. 
 
 If you are using a custom container, and decide not to use the FAB, ensure that **'Include Floating Open Button'** option is set to FALSE. 
 
@@ -188,7 +188,7 @@ navu-sidebar {
 }
 ```
 
-### Fullscreen mode
+### Fullscreen Mode
 
 When not in a custom layout, the sidebar has a **Fullscreen** button. Entering fullscreen will resize the sidebar to the window size. If you do not wish to support this,  you can hide the display button via CSS.
 
