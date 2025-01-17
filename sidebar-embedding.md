@@ -85,6 +85,27 @@ The `mode` attribute can be used to initialize the chat in **search** mode or **
 window.$navu.openSidebar('guide', 'Tell me more about pricing');
 ```
 
+### Opening Sidebar via Anchors
+
+If you do not wish to use the API to open the sidebar, you can alternatively create links on your page that can direct Navu to open the sidebar. The examples below give you an idea about how this works:
+
+```html
+<a href="#navu-sidebar">Open sidebar</a>
+
+<a href="#navu-sidebar/tab=contact">
+Open sidebar with Contact Tab selected
+</a>
+
+<a href="#navu-sidebar/tab=guide&amp;q=How%20does%20this%20work">
+Open sidebar with Guide Tab, and automatically
+ask the question "How%20does%20this%20work"
+</a>
+
+<a href="#navu-sidebar/tab=guide&mode=search">
+Open sidebar with Guide Tab, and set the mode to Search
+</a>
+```
+
 
 # Customization Use Cases
 
