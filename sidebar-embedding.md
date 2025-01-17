@@ -57,10 +57,11 @@ Following are a set of function your can call on the API after it has been initi
 ```typescript
 interface NavuEmbedApi {
   get epoch(): string;
-  openSidebar(tab?: SidebarTabType, q?: string): void;
+  openSidebar(tab?: SidebarTabType, q?: string, mode?: SidebarGuideMessageMode): void;
 }
 
 type SidebarTabType = 'guide' | 'contact' | 'info';
+type SidebarGuideMessageMode = 'chat' | 'search';   // Default = chat 
 ```
 
 You can use `epoch` readonly property to confirm if Navu API has initialized. You can also listen to the `navu-api-ready` event on the document to get notified when API is ready.
@@ -77,6 +78,8 @@ if (window.$navu.epoch) {
 ```
 
 **openSidebar**: This method can be used to Open the sidebar to a specific tab. You can optionally pass in a string that will be prefilled in the compose section. 
+
+The `mode` attribute can be used to initialize the chat in **search** mode or **chat** mode. It defaults to **chat** mode. 
 
 ```javascript
 window.$navu.openSidebar('guide', 'Tell me more about pricing');
