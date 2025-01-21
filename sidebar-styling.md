@@ -186,6 +186,18 @@ In the second image,  you will notice that the sidebar is causing the menu on th
 
 In the third image, you will see that site has replaced their menu with a mobile menu. That's a good indicator when to think about what the secont transition size should be. 
 
+## Adhesion
+
+You can position the sidebar such that the top/bottom of the sidebar stick to existing elements on the web page. For example, stick the top of the sidebar to the bottom of the site header. 
+
+The way to do that is to add a CSS selector for elements to adhere to - top and bottom, in the site settings. 
+
+In addition to that you can use the following CSS properties to affect adhesion:
+
+| **--nv-sidebar-no-adhesion**  | If set to `true`, adhesion selectors are ignored.  |  |
+| **--nv-sidebar-adhesion-top-offset**  | Numeric value to add extra offset to top of sidebar adhesion. e.g If set to `10`, the sidebar's top will stick to the bottom of the selector + 10px.   |  |
+| **--nv-sidebar-adhesion-bottom-offset**  | Numeric value to add extra offset to bottom of sidebar adhesion. e.g If set to `10`, the sidebar's bottom will stick to the top of the selector + 10px.   |  |
+
 ## Other styling 
 
 You can update the font size and family as follows:
