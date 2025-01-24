@@ -98,7 +98,7 @@ Open sidebar with Contact Tab selected
 
 <a href="#navu-sidebar/tab=guide&amp;q=How%20does%20this%20work">
 Open sidebar with Guide Tab, and automatically
-ask the question "How%20does%20this%20work"
+ask the question "How does this work"
 </a>
 
 <a href="#navu-sidebar/tab=guide&mode=search">
