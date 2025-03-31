@@ -69,23 +69,20 @@ Lastly, colors for borders, outlines, dividers.
 
 Following is a visual map of where these properties are being used:
 
-![Untitled-2023-10-20-2131](https://github.com/user-attachments/assets/a027fa15-215b-456d-bc19-696a588f55b2)
+![Untitled-2023-10-20-2131](https://github.com/user-attachments/assets/377b9216-6d9c-40e9-8864-5a39ae4a9cc4)
 
 
 | Ref  | Property |
 | ------------- | ------------- |
-| **1**  | --nv-surface-low  |
+| **1**  | --nv-surface-base  |
 | **2**  | --nv-on-surface  |
 | **3**  | --nv-highlight-surface-high |
 | **4**  | --nv-on-highlight-surface-high |
-| **5**  | --nv-surface-base |
-| **6**  | --nv-surface-medium |
-| **7**  | --nv-tertiary |
-| **8**  | --nv-primary |
-| **9**  | --nv-secondary |
-| **10**  | --nv-highlight-surface |
-| **11**  | --nv-on-highlight-surface |
-| **12** | --nv-highlight-surface-medium |
+| **5**  | --nv-primary |
+| **6**  | --nv-secondary |
+| **7**  | --nv-highlight-surface |
+| **8**  | --nv-highlight-surface-medium |
+| **9** | --nv-tertiary |
 
 ## Common Theming 
 
