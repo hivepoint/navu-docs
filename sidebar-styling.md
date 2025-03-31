@@ -22,10 +22,10 @@ Following are the default properties and values that define the theme:
 
 ```css
 --nv-surface-base: #ffffff;
---nv-surface-low: #fafafa;
---nv-surface-medium: #f7f7f7;
+--nv-surface-low: #f8f8f8;
 
 --nv-on-surface: #1D1B20;
+--nv-on-surface-alt: #555;
 
 --nv-highlight-surface: #FEF7FF;
 --nv-highlight-surface-medium: #E7E0EC;
@@ -53,7 +53,7 @@ Following are the default properties and values that define the theme:
 ```
 
 The first set of these properties with the prefix `--nv-surface-` define the colors of the main surfaces - containers for content or UI controls. 
-Another CSS property `-nv-on-surface` deifnes the color of the content that appears on these surfaces. Note that there is only one property for the three surfaces. 
+Another CSS property `--nv-on-surface` deifnes the color of the content that appears on these surfaces. Note that there is only one property for the three surfaces. 
 The idea here is that these surfaces should have similar levels of brightness so the same foreground color works on all three surfaces. e.g. the default values are white, very light gray, light gray. 
 
 The next set of properties prefixed with `--nv-highlight-` define the surfaces that are actionable (e.g. clickable) or contain special content that may need attention. There are three levels based on the importance of the content. 
