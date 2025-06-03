@@ -94,13 +94,13 @@ Here are two common configuration examples:
 
 ```css
 navu-sidebar {
-  --nv-primary: #ec9321; // buttons, etc 
-  --nv-secondary: #ec9321; // color of citations on hover, message pulsing color
+  --nv-primary: #ec9321; // Buttons, etc 
+  --nv-secondary: #ec9321; // Color of citations on hover, message pulsing color
 
-  --nv-highlight-surface-high: rgb(242, 232, 221); // background of sugegstion question, tabs
-  --nv-on-highlight-surface-high: rgb(242, 232, 221); // forgeround of sugegstion question, tabs
+  --nv-highlight-surface-high: rgb(242, 232, 221); // Background of suggestion question, tabs
+  --nv-on-highlight-surface-high: rgb(242, 232, 221); // Forgeround of suggestion question, tabs
 
-  --nv-highlight-surface: rgb(250, 247, 246); // background of citation links
+  --nv-highlight-surface: rgb(250, 247, 246); // Background of citation links
 }
 ```
 
