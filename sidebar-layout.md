@@ -139,6 +139,9 @@ Independent of the Layout-theme, Navu provides adhesion based constraints on the
 
 Most common scenario is when you have a dynamic-sized header on the page. The header may change size or scroll on/off the viewport as the user scrolls. Navu will ensure that the sidebar's top will always be below that header. 
 
+![image](https://github.com/user-attachments/assets/cad9e827-94b1-4caf-a2a2-68ad544cb7f5)
+
+
 **TODO: write this**
 
 ## CSS Styling
