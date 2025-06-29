@@ -141,16 +141,63 @@ Most common scenario is when you have a dynamic-sized header on the page. The he
 
 ![image](https://github.com/user-attachments/assets/cad9e827-94b1-4caf-a2a2-68ad544cb7f5)
 
+### How adhesion works
 
-**TODO: write this**
+In the Navu portal, you can specify a list of CSS selectors for top-adhesion, and/or a set of selectors for bottom-adhesion. 
+
+Navu will ensure that the sidebar's top will always be below the lowest point of all the elements matching the top-adhesion selectors. Similarly, it will ensure that Sidebar is above the highest point of all the elements matching the bottom-adhesion selectors. 
+
+You can also set CSS Variables to add some padding between the adhesion elements and the sidebar. 
+
+```css
+--nv-sidebar-adhesion-top-offset: 16;
+--nv-sidebar-adhesion-bottom-offset: 16;
+```
+
+The CSS above will add 16px gap between the sidebar top/bottom. 
+
+_**Important:** Do not add units the values of these offsets._
+
 
 ## CSS Styling
 
-Typically when styling the Sidebar for a website, you would set CSS under the following three categories. See Advanced CSS Styling (**TODO: link here**) to see more styling opportunities. 
+Typically when styling the Sidebar for a website, you would set CSS under the following three categories. 
 
 * __Colors & Fonts__:  Colors and Fonts that affect the Sidebar and the Floating button. 
 * __Docked Mode Adjustments__: When in docked mode, you may have to adjust the content of the page to make room for the docked sidebar
 * __General Adjustments__: Any general adjustments the site independent on what mode the sidebar is in. e.g. if your site has a "_Scroll to Top_" button at the bottom-right of the page, you may want to move it to account for the sidebar. 
+
+Having said that, Navu allows more detailed customizations as well by exposing a large set of CSS Variables. 
+
+### Fonts
+
+The font family can be set using the `--nv-font-family` variable. Font size and weight can be set directly on the `<navu-sidebar>` element. 
+
+```css
+navu-sidebar {
+  --nv-font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+```
+
+The `font-size` sets the font of the core content - the size of the generated conversation. All other font sizes, by default will adjust based on the default font-size. e.g. the font-size of the question asked by the user is always `1.15` times the standard font-size which is used by the response. 
+
+The goal here is to not to think of every possible font-size, you set your preferred message body font size and everything else should adapt. You could override these with CSS variables. Following are a list of font-related CSS variables you can use:
+
+ Variable  | Description | Default  |
+| ------------- | ------------- | ------------- |
+| **--nv-sidebar-tab-font-size**  | Font size of the tab buttons at the top of the sidebar  | `14px` |
+| **--nv-sidebar-tab-font-family**  | Override the font family for the tab 
+buttons.  | `inherit` |
+| **--nv-search-result-item-font-size**  | Font size of search response title text.  | `14px` |
+| **--nv-search-result-description-font-size**  | Font size of description text of search response items.  | `13px` |
+| **--nv-sidebar-citation-anchor-font-size**  | Font size of cited reference web pages in generated responses.  | `0.92em` |
+| **--nv-sidebar-visitor-font-size**  | Font size of user entered question/text.  | `1.15em` |
+| **--nv-sidebar-title-h2-size**  | Font size of the title text when you first load the sidebar. Typically, it says "Ask me anything"  | `2.7em` |
+| **--nv-sidebar-title-h3-size**  | Font size of the secondary title text - titles on Contact page or Info page.  | `2.4em` |
+| **--nv-sidebar-title-font-weight**  | Font weight of the title texts.  | `100` |
+| **--nv-sidebar-suggestion-font-size**  | Font size of the suggested questions new users see.  | `1.23em` |
 
 ### Colors & Font
 
