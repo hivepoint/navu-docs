@@ -246,7 +246,6 @@ Navu lets you configure different color themes for the sidebar, namely **light**
 }
 ```
 
-See Advanced Colors section to see a complete list of CSS variables available to style the sidebar. (**TODO: set link**)
 
 ### Docked Mode Adjustments
 
@@ -295,46 +294,25 @@ You may want to adjust some content on the website based on the sidebar's state 
 
 Here `--nv-minimized-sidebar-width` is a property available to use as a value representing sidebar floating button width (when sidebar is closed).
 
-### Advanced Colors
+### Underlying Color Themes
+
+Based on the CSS described in the [colors section](#colors), Navu derives a lower level color theme defined by the following set of CSS variables. One could set any of these variables to override any of the auto-derived values.
+
+| Variable  | Description | Default  |
+| ------------- | ------------- | ------------- |
+| **--nv-primary**  | Color of form buttons and icon buttons | `--nv-accent-rgb` |
+| **--nv-on-primary** | Foreground color for above.  | `--nv-accent-fg-rgb` |
+| **--nv-secondary**  | Color of highlighted messages, or when hovering of citation numbers.   | `--nv-accent-rgb` |
+| **--nv-on-secondary**  | Foreground color for above.  | `--nv-accent-fg-rgb` |
+| **--nv-tertiary**  | Used in feedback buttons, and any message meta properties   | `--nv-surface-fg-rgb` with opacity of `0.75` |
+| **--nv-on-tertiary**  | Foreground color for above.  | `--nv-surface-rgb` |
+| **--nv-highlight-surface**  | Used as background color of cited web pages in the generated answers. Also hover background for search results.  | `--nv-accent-rgb` with opacity `0.15` |
+| **--nv-on-highlight-surface**  | Foreground color for above.   | `--nv-surface-fg-rgb` |
+| **--nv-highlight-surface-medium**  | Used in citation references  | `--nv-accent-rgb` with opacity `0.3` |
+| **--nv-on-highlight-surface-medium**  |Foreground color for above.  | `--nv-surface-fg-rgb` |
+| **--nv-highlight-surface-high**  | Used in various actionable items like tabs, buttons, etc  | `--nv-accent-rgb` |
+| **--nv-on-highlight-surface-high**  | Foreground color for above.  | `--nv-accent-fg-rgb` |
+
 
 ## Advanced CSS 
 
-Navu Sidebar exposes a lot of CSS variables that can be used to fine tune styling of the sidebar based on the website's needs. 
-
-**The standard CSS**, typically included with the sidebar abstracts out some of these CSS properties to some common ones. e.g. if you set the accent color, it will set the various variables based on the accent color - creating different shaded based on the accent color. The standard CSS also adjusts the layout to support different modes discussed above. 
-
-If you disable Standard CSS (in the Navu portal), you are responsible for laying out and overriding all the colors. 
-
-Following are the list of CSS variables available to you. Some of them are available via the standard CSS. Others are available to all even if you have the standard CSS disabled. 
-
-### Standard CSS Variables
-
-| Variable  | Description | Default  |
-| ------------- | ------------- | ------------- |
-| **--nv-sidebar-docked-width**  | Width of the sidebar when in Docked mode.  | `320px` |
-| **--nv-sidebar-overlay-width**  | Width of the sidebar when in Overlay mode.  | `420px` |
-| **--nv-overlay-drawer-shadow**  | Drop shadow of the sidebar when in Overlay mode.  | `--nv-primary` |
-| **--nv-sidebar-docked-z-index**  | Z-index of sidebar in docked mode  | `100` |
-| **--nv-sidebar-overlay-z-index**  | Z-index of sidebar in overlay mode  | `100` |
-| **--nv-sidebar-mobile-z-index**  | z-index of the modal sidebar when in mobile mode  | `2147483647` |
-| **--nv-sidebar-overlay-max-height**  | Max-height of the sidebar when in Overlay mode  | `900px` |
-| **--nv-sidebar-overlay-max-idle-height**  | Max-height of the sidebar when in Overlay mode, before the use has engaged with the sidebar  | `300px` |
-| **--nv-light-accent-rgb**  | Accent color RGB value in light mode  | `11, 77, 107` |
-| **--nv-light-accent-fg-rgb**  | Foreground color for text and icons that appear on top of accent color in light mode  | `255, 255, 255` |
-| **--nv-light-surface-rgb**  | Surface background color of the sidebar in light mode  | `255, 255, 255` |
-| **--nv-light-surface-fg-rgb**  | Foreground color for text and icons that appear on top of sidebar in light mode  | `0, 0, 0` |
-| **--nv-dark-accent-rgb**  | Accent color RGB value in dark mode  | `217, 222, 240` |
-| **--nv-dark-accent-fg-rgb**  | Foreground color for text and icons that appear on top of accent color in dark mode  | `0, 0, 0` |
-| **--nv-dark-surface-rgb**  | Surface background color of the sidebar in dark mode  | `0, 0, 0` |
-| **--nv-dark-surface-fg-rgb**  | Foreground color for text and icons that appear on top of sidebar in dark mode  | `255, 255, 255` |
-| **--nv-colorful-accent-rgb**  | Accent color RGB value in colorful mode  | `46, 80, 25` |
-| **--nv-colorful-accent-fg-rgb**  | Foreground color for text and icons that appear on top of accent color in colorful mode  | `255, 255, 255` |
-| **--nv-colorful-surface-rgb**  | Surface background color of the sidebar in colorful mode  | `218, 231, 203` |
-| **--nv-colorful-surface-fg-rgb**  | Foreground color for text and icons that appear on top of sidebar in colorful mode  | `0, 0, 0` |
-
-## Core CSS Variables
-
-These are the set of variables defined and used by the navu sidebar widget. Even if you are not using the Standard CSS - i.e. doing your own layout, you can set these properties on the `<navu-sidebar>` to style and configure the component.
-
-| Variable  | Description | Default  |
-| ------------- | ------------- | ------------- |
