@@ -164,7 +164,7 @@ _**Important:** Do not add units the values of these offsets._
 Typically when styling the Sidebar for a website, you would set CSS under the following three categories. 
 
 * __Colors & Fonts__:  Colors and Fonts that affect the Sidebar and the Floating button. 
-* __Docked Mode Adjustments__: When in docked mode, you may have to adjust the content of the page to make room for the docked sidebar
+* __Docked Mode Adjustments__: When in docked mode (Classic-Docked layout), you may have to adjust the content of the page to make room for the docked sidebar
 * __General Adjustments__: Any general adjustments the site independent on what mode the sidebar is in. e.g. if your site has a "_Scroll to Top_" button at the bottom-right of the page, you may want to move it to account for the sidebar. 
 
 Having said that, Navu allows more detailed customizations as well by exposing a large set of CSS Variables. 
@@ -188,8 +188,7 @@ The goal here is to not to think of every possible font-size, you set your prefe
  Variable  | Description | Default  |
 | ------------- | ------------- | ------------- |
 | **--nv-sidebar-tab-font-size**  | Font size of the tab buttons at the top of the sidebar  | `14px` |
-| **--nv-sidebar-tab-font-family**  | Override the font family for the tab 
-buttons.  | `inherit` |
+| **--nv-sidebar-tab-font-family**  | Override the font family for the tab buttons.  | `inherit` |
 | **--nv-search-result-item-font-size**  | Font size of search response title text.  | `14px` |
 | **--nv-search-result-description-font-size**  | Font size of description text of search response items.  | `13px` |
 | **--nv-sidebar-citation-anchor-font-size**  | Font size of cited reference web pages in generated responses.  | `0.92em` |
@@ -199,49 +198,63 @@ buttons.  | `inherit` |
 | **--nv-sidebar-title-font-weight**  | Font weight of the title texts.  | `100` |
 | **--nv-sidebar-suggestion-font-size**  | Font size of the suggested questions new users see.  | `1.23em` |
 
-### Colors & Font
+### Colors
 
-The Standard CSS included with the widget exposes some CSS properties to easily configure visual theme of the sidebar. 
+The sidebar is designed primarily with four colors:
 
-The font family is set using `--nv-font-family` property. 
+1. The background of the sidebar (`--nv-surface-rgb`)
+2. The foreground color (`--nv-surface-fg-rgb`)
+3. An accent color that matches your site's primary highlight color (`--nv-accent-rgb`)
+4. Foreground color for content placed on the accent-color background (`--nv-accent-fg-rgb`)
 
-Typically you want to set the following colors:
+We require you to set these colors as `r, g, b` values. This allows Navu to extract shades of the specified colors to highlight different items in the view. (You can overwrite these colors if you do not like the derived shades.)
 
-**Background & Foreground Color**: Background color of the sidebar and color of the text that appears in the foreground. 
+So typically, the color configuration CSS looks like:
 
-**Accent Color**: An accent color to highlight actionable or special items in the sidebar, like buttons, citations, etc. And a foreground accent color - Color of text or icons which appear on top of an accented surface. 
-
-Typically you would want to se these colors for both **Light** and **Dark** themes. All these colors have reasonable default values set, if you do not specify any one of them.
-
-_**Note**: These theme based Colors are specified as `r, g, b` values rather than standard CSS colors. These `r, g, b` values are used by the standard template to derive other shades of this color._
-
-```cs
+```css
 :root {
-  --nv-font-family: Roboto, sans-serif;
-
-  --nv-light-accent-rgb: 11, 77, 107;
-  --nv-light-accent-fg-rgb: 255, 255, 255;
-
-  --nv-dark-accent-rgb: 217, 222, 240;
-  --nv-dark-accent-fg-rgb: 0, 0, 0;
-
-  --nv-light-surface-rgb: 255, 255, 255;
-  --nv-light-surface-fg-rgb: 31, 31, 31;
-
-  --nv-dark-surface-rgb: 24, 24, 36;
-  --nv-light-surface-fg-rgb: 255, 255, 255;
+  --nv-surface-rgb: 255, 240, 255;
+  --nv-surface-fg-rgb: 0, 0, 0;
+  --nv-accent-rgb: 46, 80, 25;
+  --nv-accent-fg-rgb: 255, 255, 255;
 }
 ```
 
-See a complete list of CSS properties available here (**TODO: add link here**)
+#### Light, Dark, Colorful Themes
+
+Navu lets you configure different color themes for the sidebar, namely **light**, **dark**, **colorful**. If you wish to support
+ these themes, we recommend setting the following CSS Variables instead. 
+
+ _**Note:** Navu onboarding team usually sets up the initial themes for you in the CSS settings. Feel free to update or replace them._
+
+ ```cs
+:root {
+  --nv-light-surface-rgb: 255, 255, 255;
+  --nv-light-surface-fg-rgb: 31, 31, 31;
+  --nv-light-accent-rgb: 11, 77, 107;
+  --nv-light-accent-fg-rgb: 255, 255, 255;
+
+  --nv-dark-surface-rgb: 24, 24, 36;
+  --nv-light-surface-fg-rgb: 255, 255, 255;
+  --nv-dark-accent-rgb: 217, 222, 240;
+  --nv-dark-accent-fg-rgb: 0, 0, 0;
+
+  --nv-dark-surface-rgb: 218, 231, 203;
+  --nv-light-surface-fg-rgb: 0, 0, 0;
+  --nv-dark-accent-rgb: 46, 80, 25;
+  --nv-dark-accent-fg-rgb: 255, 255, 255;
+}
+```
+
+See Advanced Colors section to see a complete list of CSS variables available to style the sidebar. (**TODO: set link**)
 
 ### Docked Mode Adjustments
 
-You will likely need some CSS if you wish to support Docked mode (default) of the sidebar. 
+You will likely need to ass some CSS if you wish to support Docked mode of the sidebar - available in the default **Classic-Dockable** layout theme. 
 
-Typically this involves adding a padding to the right of the page to make room for the sidebar. You may decide to update the width rather than add padding. Or change some other CSS properties to ensure a docked sidebar does not overlap with your content. 
+Docked mode ins the sidebar to the right edge of the viewport. Typically, this involves adding a padding to the right of the page to make room for the sidebar. You may decide to update the width rather than add padding. Or change some other CSS properties to ensure a docked sidebar does not overlap with your content. 
 
-Here's some typical CSS
+Here's some typical CSS:
 
 ```css
 /* Following CSS only applies when sidebar is Docked */
@@ -264,11 +277,11 @@ Here's some typical CSS
 }
 ```
 
-Here `--nv-sidebar-width` is a property provided by the standard CSS that you can use to use as a variable representing sidebar width. Read more about this here (**TODO: Add link**)
+Here `--nv-sidebar-width` is a property available to use as a value representing sidebar width. 
 
 ### General Adjustments
 
-You may want to adjust some content on the website based on the sidebar's state independent of the layout mode of the sidebar. e.g. if your site has a "_Scroll to Top_" button at the bottom-right of the page, you may want it to move to the left of the floating sidebar button when sidebar is closed, and hide it when sidebar is open. 
+You may want to adjust some content on the website based on the sidebar's state independent of the layout mode of the sidebar. e.g. if your site has a "_Scroll to Top_" button at the bottom-right of the page, you may wish it to move to the left of the floating sidebar button when sidebar is closed, and hide it when sidebar is open. 
 
 ```css
 .nv-sidebar-open #scrollTopButton {
@@ -279,7 +292,10 @@ You may want to adjust some content on the website based on the sidebar's state 
   right: calc(40px + var(--nv-minimized-sidebar-width));
 }
 ```
-Here `--nv-minimized-sidebar-width` is a property provided by the standard CSS that you can use to use as a variable representing sidebar floating button width when sidebar is closed. Read more about this here (**TODO: Add link**)
+
+Here `--nv-minimized-sidebar-width` is a property available to use as a value representing sidebar floating button width (when sidebar is closed).
+
+### Advanced Colors
 
 ## Advanced CSS 
 
