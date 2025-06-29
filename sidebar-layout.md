@@ -316,3 +316,5 @@ Based on the CSS described in the [colors section](#colors), Navu derives a lowe
 
 ## Advanced CSS 
 
+![image](https://github.com/user-attachments/assets/5a1403e6-5dcf-46b6-821d-0411e4f87e13)
+
