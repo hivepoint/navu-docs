@@ -20,9 +20,9 @@ If you selected **Custom**, then no CSS is injected, and the Website developers 
 
 You can add additional CSS to style the Sidebar based on your website, e.g. to customize the colors of font of the sidebar. You may also need CSS to change your site layout to allow for the sidebar to dock nicely with the rest of the content. 
 
-YOu can specify the custom CSS in the Navu portal - Navu will inject this CSS when the Sidebar is created; or you can add the CSS in your Website's code. 
+You can specify the custom CSS in the Navu portal - Navu will inject this CSS when the Sidebar is created; or you can add the CSS in your Website's code. 
 
-_**Note:** Navu's onboarding team typically adds some CSS in the Navu Portal so that the sidebar loads nicely in your website. This way the sidebar is up and running on the website without and developer/designer involvement. Feel free to update it if needed._
+_**Note:** Navu's onboarding team typically adds some CSS in the Navu Portal so that the sidebar loads nicely in your website. This way the sidebar is up and running on the website without any developer/designer involvement. Feel free to update it if needed._
 
 ### Body Classes 
 
