@@ -312,9 +312,195 @@ Based on the CSS described in the [colors section](#colors), Navu derives a lowe
 | **--nv-on-highlight-surface-medium**  |Foreground color for above.  | `--nv-surface-fg-rgb` |
 | **--nv-highlight-surface-high**  | Used in various actionable items like tabs, buttons, etc  | `--nv-accent-rgb` |
 | **--nv-on-highlight-surface-high**  | Foreground color for above.  | `--nv-accent-fg-rgb` |
+| **--nv-outline**  | Color of outlined and borders  | `--nv-surface-fg-rgb` with opacity of `0.12` |
+| **--nv-outline-darker**  | Alternative, darker outline color | `--nv-surface-fg-rgb` with opacity of `0.6` |
 
 
 ## Advanced CSS 
 
+Here are some CSS variables that affect the overall experience.
+
+| Variable  | Description | Default  |
+| ------------- | ------------- | ------------- |
+| **--nv-sidebar-width** | Width of the sidebar | `320px`, `420px` in overlay mode |
+| **--nv-drawer-shadow** | box-shadow for the sidebar panel | `none` |
+| **--nv-overlay-drawer-shadow** | box shadow in overlay mode | |
+| **--nv-drawer-radius** | border radius | `none`, `12px` in overlay mode |
+| **--nv-drawer-border-left** | Panel left border | |
+| **--nv-drawer-border-right** | Panel right border | |
+| **--nv-drawer-border-top** | Panel top border | |
+| **--nv-drawer-border-bottom** | Panel bottom border | |
+| **--nv-sidebar-fullscreen-z-index** | z-index when in fullscreen mode | |
+| **--nv-sidebar-citation-popup-display** | Set to `none` to not show citation popups | |
+
+
+Now we will break down the Sidebar UI into various visual parts and provide a list of CSS variables that affect that specific part. 
+
 ![image](https://github.com/user-attachments/assets/5a1403e6-5dcf-46b6-821d-0411e4f87e13)
 
+### 1. Tab Buttons
+
+| Variable  | Description | Default  |
+| ------------- | ------------- | ------------- |
+| **--nv-sidebar-tab-font-size**  | Font size | `14px` |
+| **--nv-sidebar-tab-font-family**  | Font family | `inherit` |
+| **--nv-sidebar-selected-tab-bg** | Selected tab background color.  | `--nv-highlight-surface-high` |
+| **--nv-sidebar-selected-tab-fg** | Selected tab foreground color.  | `--nv-on-highlight-surface-high` |
+
+### 2. Header Icon Buttons
+
+| Variable  | Description | Default  |
+| ------------- | ------------- | ------------- |
+| **--nv-drawer-icon-button-color**  | Color of the icon buttons | `--nv-on-surface` |
+| **--nv-drawer-close-button-display** | Set to `none` to hide the close button | |
+| **--nv-drawer-more-button-display** | Set to `none` to hide the more menu button | |
+| **--nv-drawer-fullscreen-button-display** | set to `none` to hide the fullscreen menu item | |
+
+### 3. Sidebar Main Panel 
+
+| Variable  | Description | Default  |
+| ------------- | ------------- | ------------- |
+| **--nv-surface-rgb**  | Background color |  |
+| **--nv-on-surface** | Foreground text color | |
+| **--nv-surface-overlay-opacity**  | Background color opacity when in overlay mode |  |
+
+### 4. Compose Area
+
+| Variable  | Description | Default  |
+| ------------- | ------------- | ------------- |
+| **--nv-sidebar-splash-compose-min-height**  | Height of input textarea when user has not has any conversation yet.  | `200px` |
+| **--nv-sidebar-fullscreen-max-width** | Max width of the compose panel when in fullscreen mode.  | `800px` |
+| **--nv-surface-low**  | Background color of unselected toggle button.  | `--nv-surface-fg-rgb` with opacity 
+of 0.1 |
+| **--nv-on-surface-low**  | Icon color of unselected toggle button.  | `--nv-on-surface` |
+| **--nv-highlight-surface-high** | Selected toggle button background color | Derived |
+| **--nv-on-highlight-surface-high** | Selected toggle button foreground icon color | Derived |
+
+### 5. Suggested Question 
+
+| Variable  | Description | Default  |
+| ------------- | ------------- | ------------- |
+| **--nv-sidebar-suggestion-bg**  | Background color of the suggested question. | `--nv-highlight-surface-high` |
+| **--nv-sidebar-suggestion-fg** | Foreground text color of the suggested question.`--nv-on-highlight-surface-high` |
+| **--nv-sidebar-suggestion-font-size** | Font size of the suggested question | `1.23em` |
+| **--nv-sidebar-suggestions-display** | Set to `none` to hide suggested questions | |
+
+### 6. Privacy/Disclaimer Notice 
+
+| Variable  | Description | Default  |
+| ------------- | ------------- | ------------- |
+| **--nv-on-surface-alt**  | Text color. | `--nv-surface-fg-rgb` with the opacity `0.75` |
+| **--nv-sidebar-disclaimer-display** | Set to `none` to hide this message | |
+
+Any hyperlinks get the color `--nv-primary`.
+
+#### 7. Contact Form
+
+| Variable  | Description | Default  |
+| ------------- | ------------- | ------------- |
+| **--nv-sidebar-form-input-size**  | Font size of text inputs. | `16px` |
+| **--nv-sidebar-disclaimer-display** | Set to `none` to hide this message | |
+| **--nv-sidebar-form-message-size** | Font size of the message at top of the form | `16px` |
+| **--nv-sidebar-form-message-weight** | Font weight of the message at top of the form | `300` |
+| **--nv-textarea-line-color** | Textarea border color. | `--nv-outline-darker` |
+| **--nv-textfield-line-color** | Textfield border color. | `--nv-outline-darker` |
+
+### 8. Buttons
+
+| Variable  | Description | Default  |
+| ------------- | ------------- | ------------- |
+| **--nv-button-inactive-color**  | Button color when button is not enabled | `rgba(0, 0, 0, 0.26)` |
+| **-nv-primary** | Active button background color | |
+| **-nv-on-primary** | Active button foreground color | |
+
+### 9. User Message (Question)
+
+| Variable  | Description | Default  |
+| ------------- | ------------- | ------------- |
+| **--nv-sidebar-visitor-font-size**  | Font size | `1.154em` |
+| **--nv-sidebar-visitor-message-color** | Text color | `inherit` to surface foreground |
+
+### 10. Message Content (including user message) 
+
+| Variable  | Description | Default  |
+| ------------- | ------------- | ------------- |
+| **--nv-secondary**  | The color the message flashes from when a new message comes in. |  |
+| **--nv-sidebar-user-icon-color** | User icon color. | `--nv-surface-fg-rgb` with opacity of `0.55` |
+| **--nv-page-summary-bg** | Background color of the page summary message | `--nv-surface-low`  |
+| **--nv-page-summary-fg** | Foreground color of the page summary message | `--nv-on-surface` |
+
+### 11. Inline Citation
+
+| Variable  | Description | Default  |
+| ------------- | ------------- | ------------- |
+| **--nv-highlight-surface-medium**  | Background color of citation item |  |
+| **--nv-on-highlight-surface-medium**  | Foreground color of citation item |  |
+| **--nv-sidebar-citation-size**  | Font size  | `0.92em` |
+| **--nv-secondary**  | Background color of citation item when hovered |  |
+| **--nv-on-secondary**  | Foreground color of citation item when hovered |  |
+
+### 12. Citation Items
+
+| Variable  | Description | Default  |
+| ------------- | ------------- | ------------- |
+| **--nv-sidebar-citation-anchor-font-size**  | Font size | `0.92em`  |
+| **--nv-highlight-surface**  | Background color of citation item |  |
+| **--nv-on-highlight-surface**  | Foreground color of citation item |  |
+
+The citation reference count has the same styles as *Inline Citations*. 
+
+### 13. Message Compose
+
+See *4. Compose Area*
+
+### 14. Search Result
+
+| Variable  | Description | Default  |
+| ------------- | ------------- | ------------- |
+| **-nv-search-result-item-bg**  | Background color of the item | `none` |
+| **--nv-search-result-item-border**  | Item border |  |
+| **--nv-search-result-item-border-color** | Item border color | |
+| **-nv-search-result-item-font-size** | Font size | `14px` |
+| **--nv-search-result-mark-bg** | Background of highlighted matched text | `#FFEE58` |
+| **--nv-search-result-mark-fg** | Foreground of highlighted matched text | `#1D1D1D` |
+| **--nv-search-result-description-font-size** | Font size of item description | `13px` |
+| **--nv-search-result-description-line-count** | Max number of lines of description to show.  | `2` |
+| **-nv-search-result-item-hover-bg** | Background color on hover  | `--nv-highlight-surface` |
+| **-nv-search-result-item-hover-fg** | Foreground color on hover  | `--nv-on-highlight-surface` |
+
+### Misc 
+
+The main sidebar panel is also exposed as a `:part` so you can also directly affect it. 
+
+```css
+navu-sidebar::part(drawer) {
+  max-height: 800px;
+  backdrop-filter: blur(8px);
+}
+```
+
+**Citation Popups**
+
+You can set up a screen size using `@media` queries where Citation popups will not be shown. For examples, in the Classic layouts, they are not shown below `770px` widths
+
+```css
+/* Width at which citations will not popup */
+@media (max-width: 770px) {
+  :root {
+    --nv-sidebar-citation-popup-display: none;
+  }
+}
+```
+
+**Auto-Open Sidebar**
+
+Navu remembers if the Sidebar was open so it stays open on subsequent pageviews. This may not be the desired behavior on smaller screens. Classic layouts disable this behavior for screens under `1000px`. You can configure it yourself to a different width. 
+
+```css
+/* Width at which landing on a page will not open the sidebar */
+@media (max-width: 1000px) {
+  navu-sidebar {
+    --nv-sidebar-disable-state-persistence: true;
+  }
+}
+```
