@@ -6,8 +6,7 @@ When the Sidebar is added to a web page, two components get appended to the `<bo
 
 ![image](https://github.com/user-attachments/assets/7dc0e1ad-95e7-4ada-82b9-44524f8850d5)
 
-**Sidebar Widget**: The sidebar is added to a page as a web component: `<navu-sidebar>`. (Note:  If you want to customize how and where it is added to the page see **TODO: Custom Layout**.)
-
+**Sidebar Widget**: The sidebar is added to a page as a web component: `<navu-sidebar>` as the last child of the body. (Note:  If you want to customize how and where it is added to the page see **TODO: Custom Layout**.)
 
 ## Sidebar Widget Overview
 
