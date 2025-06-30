@@ -248,7 +248,7 @@ Navu lets you configure different color themes for the sidebar, namely **light**
 
 ### Docked Mode Adjustments
 
-You will likely need to ass some CSS if you wish to support Docked mode of the sidebar - available in the default **Classic-Dockable** layout theme. 
+You will likely need to add some CSS if you wish to support Docked mode of the sidebar - available in the default **Classic-Dockable** layout theme. 
 
 Docked mode ins the sidebar to the right edge of the viewport. Typically, this involves adding a padding to the right of the page to make room for the sidebar. You may decide to update the width rather than add padding. Or change some other CSS properties to ensure a docked sidebar does not overlap with your content. 
 
