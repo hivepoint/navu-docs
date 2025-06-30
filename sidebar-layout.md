@@ -40,7 +40,7 @@ Following are the list of class names:
 
 **`nv-sidebar-color-${colorTheme}`**: This class is added based on which color theme is being used on the page - based on the settings in Navu portal. Values would look like `nv-sidebar-color-light`, `nv-sidebar-color-dark`, `nv-sidebar-color-custom`
 
-**`nv-sidebar-layout-${layoutTheme}`**: This class is added to specify which layout theme is being used. e.g. `nv-sidebar-layout-classic-docked`.  (See Sidebar layouts **TODO: add link**).
+**`nv-sidebar-layout-${layoutTheme}`**: This class is added to specify which layout theme is being used. e.g. `nv-sidebar-layout-classic-docked`.  (See [Sidebar layouts](#sidebar-layouts)).
 
 **`nv-sidebar-minimized-${minimizedTheme}`**: This sets what style of floating button is being used when the sidebar is closed - fab or box. 
 
