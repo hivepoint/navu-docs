@@ -14,7 +14,7 @@ In the Navu Portal you can set the *layout theme* of the sidebar. The current ve
 
 Based on the *layout theme* selection, Navu will inject CSS in the `<head>` of your page. This CSS lays out the sidebar in different screen widths. 
 
-If you selected **Custom**, then no CSS is injected. And the Website developers are responsible of customizing the layout. By default the Sidebar will appear `position: fixed` docked to the right of the screen. 
+If you selected **Custom**, then no CSS is injected, and the Website developers are responsible of customizing the layout. By default the Sidebar will appear `position: fixed` docked to the right of the screen. 
 
 ### Additional CSS
 
