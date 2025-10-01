@@ -3,4 +3,6 @@
 
 [Sidebar Embedding](https://hivepoint.github.io/navu-docs/sidebar-embedding)
 
-[Custom CMP Integration]([./custom-cmp](https://hivepoint.github.io/navu-docs/custom-cmp))
+[Custom CMP Integration](https://hivepoint.github.io/navu-docs/custom-cmp)
+
+[MS Teams Integration](https://hivepoint.github.io/navu-docs/navu-teams-setup)
