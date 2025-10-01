@@ -1,6 +1,10 @@
 # Microsoft Teams + Navu
 
-You can connect Navu Sidebar's live chat feature to a channel in your MS Teams instance. When someone wants to start a live chat in the sidebar, Navu will send a message in the Teams channel. This message will include the user's initial message and some metadata about the user. You can reply to that message in the channel. The thread created by this reply will mirror the chat the user sees on the sidebar. All their messages will appear in this thread. 
+You can connect Navu Sidebar's live chat feature to a channel in your MS Teams instance. When someone wants to start a live chat in the sidebar, Navu will send a message in the Teams channel. This message will include the user's initial message and some metadata about the user. You can reply to that message in the channel. The thread created by this reply will mirror the chat the user sees on the sidebar. All their messages will appear in this thread.
+
+<img width="650" height="669" alt="Screenshot 2025-10-01 at 2 08 58 PM" src="https://github.com/user-attachments/assets/950c7591-a145-4cb4-9d61-b972920cd2dd" />
+
+
 
 ## Setting up Teams
 
