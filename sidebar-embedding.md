@@ -66,9 +66,12 @@ formData: {
 Say, you are using AdRoll to track forms submitted by users who came via a certain ad. You can listen to the form submit event and notify AdRoll when this happens.
 
 ```javascript
-document.addEventListener('navu-sidebar-form-submit', () => {
+document.addEventListener('navu-sidebar-form-submit', (event) => {
+  const formData = event.formData;
+  console.log('Form submitted on Navu sidebar by ' + formData.name);
+
+  // Now report to AdRoll. Replace xxxxxx with the appropriate Ad segment Id. 
   try {
-   // Replace xxxxxx with the appropriate Ad segment Id. 
     __adroll.record_user({"adroll_segments": "xxxxxx"});
   } catch(err) {
     console.error('Failed to report form submit to AdRoll');
