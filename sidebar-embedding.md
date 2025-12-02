@@ -50,6 +50,33 @@ Following events are emitted by the sidebar to support integration. More on thes
 **sidebar-error**: This event is fired when there is an error in initializing  the sidebar. The error object is available in the event's detail property `event.detail`. 
 You can use this to update your UI, when  using a custom layout.
 
+**navu-sidebar-form-submit**: This event is fired when the user submits the form on Sidebar's 'Contact' tab. This could be to leave a message, to start a live chat, or use a custom action. The event has a member called `formData` that contains the details of the submitted data. 
+
+```typescript
+formData: {
+  name: string;
+  email: string;
+  message:string;
+  additionalFields?: Record<string, string>;
+};
+```
+
+#### Form submit event - example use case
+
+Say, you are using AdRoll to track forms submitted by users who came via a certain ad. You can listen to the form submit event and notify AdRoll when this happens.
+
+```javascript
+document.addEventListener('navu-sidebar-form-submit', () => {
+  try {
+   // Replace xxxxxx with the appropriate Ad segment Id. 
+    __adroll.record_user({"adroll_segments": "xxxxxx"});
+  } catch(err) {
+    console.error('Failed to report form submit to AdRoll');
+  }
+});
+```
+
+
 ## Advanced
 
 Following are a set of function your can call on the API after it has been initialized. 
