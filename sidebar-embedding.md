@@ -61,6 +61,13 @@ formData: {
 };
 ```
 
+The event also has a couple of other properties that indicate which button was used to submit the form. (The `customButton` is set when the `submitButton` is set to `custom`.)
+
+```typescript
+public submitButton: 'start-chat' | 'leave-message' | 'custom',
+public customButton?: { id: string; text: string, url: string }
+```
+
 #### Form submit event - example use case
 
 Say, you are using AdRoll to track forms submitted by users who came via a certain ad. You can listen to the form submit event and notify AdRoll when this happens.
