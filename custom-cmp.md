@@ -32,10 +32,12 @@ or
 $navu.consent = 'denied';
 ```
 
-## Adding Navu Cookies to your CMP configuration
+## Adding Navu Cookies/Variables to your CMP configuration
 
-Navu uses the following cookies:
+We store information in your browser via localStorage. You can declare these in your cookies/local-storage section of your CMP configuration. 
+Mark them as necessary because they are required to properly load the sidebar and respond to user requests. We do not track the user using these variables. 
+Only when your CMP grants 'analytics' permission (implicitly or explicitly), we start tracking the user analytics. No new cookie is created, but an id is assigned to the `navu-embed-state` local storage variable.
 
-**navu-embed-browser-id**: This first-party cookie stores a unique ID assigned to a user. 
-
-**navu-cross-domain-browser-id**: This third-party cookies is only used if your website spans across multiple domains. Typically, that is not case. 
+`navu-embed-state` This tracks the state whether these is a unique id or not based on CMP permission, and if the sidebar was engaged by the user. 
+`navu-embed-consent` This tracks the consent state, and CMP information.
+`nv-sidebar` This keeps track of information regarding the sidebar (no PII) - CSS for the sidebar, What is the active tab of the sidebar, is it closed or open. This data is not sent to the server. 
