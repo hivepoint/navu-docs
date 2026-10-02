@@ -34,12 +34,16 @@ $navu.consent = 'denied';
 
 ## Adding Navu Cookies/Variables to your CMP configuration
 
-We store information in your browser via localStorage. You can declare these in your cookies/local-storage section of your CMP configuration. 
-Mark them as necessary because they are required to properly load the sidebar and respond to user requests. We do not track the user using these variables. 
-Only when your CMP grants 'analytics' permission (implicitly or explicitly), we start tracking the user analytics. No new cookie is created, but an id is assigned to the `navu-embed-state` local storage variable.
+We store information in your browser via localStorage. You can declare these four properties in your cookies/local-storage section of your CMP configuration. 
 
-**`navu-embed-state`** This tracks the state whether these is a unique id or not based on CMP permission, and if the sidebar was engaged by the user. 
+Three of them are to be marked as **necessary**, because they are required to properly load the sidebar and respond to user requests. We do not track the user using these variables. 
 
-**`navu-embed-consent`** This tracks the consent state, and CMP information.
+One is of them (*navu-embed-analytics*) should be marked for **analytics**  (or **tracking** based on your CMP terminology). This is set only when your CMP grants 'analytics' permission (implicitly or explicitly). When this is set, we start tracking the user analytics.
 
-**`nv-sidebar`** This keeps track of information regarding the sidebar (no PII) - CSS for the sidebar, What is the active tab of the sidebar, is it closed or open. This data is not sent to the server. 
+**`navu-embed-state`** (_necessary_) This tracks the state whether these is a unique id or not based on CMP permission, and if the sidebar was engaged by the user. 
+
+**`navu-embed-consent`** (_necessary_) This tracks the consent state, and CMP information.
+
+**`nv-sidebar`** (_necessary_) This keeps track of information regarding the sidebar (no PII) - CSS for the sidebar, What is the active tab of the sidebar, is it closed or open. This data is not sent to the server. 
+
+**`navu-embed-analytics`** (analytics) This indicates that analytics tracking is enabled for that user. This only set when your CMP grants 'analytics' permission (implicitly or explicitly). 
